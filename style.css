@@ -1,0 +1,368 @@
+@font-face {
+    font-family: 'proximanova';
+    src: url('./fonts/proximanova-regular-webfont.woff');
+}
+
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-clr: #33aef4;
+    --sub-clr: #9c9c9c;
+    --bg-clr: linear-gradient(to bottom, #f0f0f0 24%, #fcfcfc 52%, #fff 100%);
+    --btn-shadow: 0 3px 6px 0 rgba(66, 45, 45, 0.16)
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'proximanova', sans-serif;
+    padding: 1rem;
+    line-height: 1.5;
+    width: 100%;
+    background: var(--bg-clr);
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, a, input {
+    font-family: inherit;
+}
+
+/* ------------------ */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-clr);
+    padding: 7px 19px 6px 20px;
+    border-radius: 25px;
+    box-shadow: var(--btn-shadow);
+    transition: all 250ms ease-in-out;
+}
+
+.login-btn:hover {
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.26);
+    transform: scale(1.05);
+}
+
+.title {
+    text-align: center;
+    color: var(--primary-clr);
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+/* ----------- */
+
+main {
+    text-align: center;
+}
+
+.pwi-center {
+    color: white;
+    background-color: var(--primary-clr);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+    cursor:default;
+}
+
+.pwi-center h2 {
+    font-weight: 900;
+    text-shadow: 0px 0px 2px white;
+}
+
+form {
+    width: max-content;
+    margin: 2rem auto;
+    position: relative;
+}
+
+form span {
+    color: var(--primary-clr);
+    position: absolute;
+    top: .85rem;
+    left: 20px;
+    transition: all 100ms ease-in-out;
+}
+
+#search {
+    width: 528px;
+    height: 47px;
+   padding: 17px 15px 16px 51.8px;
+   opacity: 1;
+   border-radius: 25px;
+   background-color: #fff;
+   border: none;
+   outline: none;
+   color: var(--sub-clr);
+   box-shadow: inset 0 3px 7px 0 rgba(0, 0, 0, 0.26);
+}
+
+form:hover span {
+    transform: scale(1.1);
+}
+
+::placeholder {
+    color: var(--sub-clr);
+}
+
+.main-text, .down-text, .donate-text {
+    color: var(--sub-clr);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 7px 14px 6px 50px;
+    border-radius: 25px;
+    box-shadow: var(--btn-shadow);
+    font-size: .85rem;
+    font-weight: bold;
+    color: var(--primary-clr);
+    background-color: #fff;
+    transition: all 250ms ease-in-out;
+}
+
+.btn span {
+    padding: 5px 0 0 30px;
+    color: var(--sub-clr);
+}
+
+.btn:hover span {
+    color: var(--primary-clr);
+}
+
+.arrow-down {
+    margin-top: 6rem;
+    animation: bounce 2s infinite;
+    padding: 13px 15px;
+    display: grid;
+    place-items: center;
+    background-color: #9c9c9c88;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.7rem;
+    border-radius: 50%;
+    box-shadow: var(--btn-shadow);
+    cursor: pointer;
+}
+
+.arrow-down a {
+    color: #fff;
+    display: grid;
+    place-items: center;
+}
+
+.arrow-down:hover a {
+    color: var(--primary-clr);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -moz-transform: translateY(-30px);
+      -ms-transform: translateY(-30px);
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -moz-transform: translateY(-15px);
+      -ms-transform: translateY(-15px);
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  }
+
+  /* ===========download section===== */
+  .down-title, .donate-title {
+      color: var(--primary-clr);
+      font-weight: bold;
+      font-size: 2.2rem;
+  }
+
+  .down-title {
+      margin-top: 7rem;
+      margin-bottom: 1rem;
+  }
+
+  .down-list {
+      color: var(--sub-clr);
+      margin-bottom: 3rem;
+  }
+
+  .down-btn, .donate-btn {
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-clr);
+    padding: 7px 19px 6px 20px;
+    border-radius: 25px;
+    box-shadow: var(--btn-shadow);
+    display: inline-block;
+    transition: all 250ms ease-in-out;
+}
+
+.down-btn:hover, .donate-btn:hover  {
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.26);
+    transform: scale(1.06);
+}
+
+hr {
+    background-color: #c0c0c0c7;
+    width: 60%;
+    margin: auto;
+    margin-top: 3rem;
+    font-weight: bold;
+    height: 3px;
+}
+/* donate section                   ->some of the donate section styles are common to download section so they are mixed */
+.donate {
+    margin-top: 6rem;
+    display: flex;
+    gap: 7rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.donate-img {
+    width: 300px;
+}
+
+.donate-btn {
+    margin-top: 3rem;
+}
+
+.donate-text {
+    margin-top: 1rem;
+}
+
+/* footer section  */
+.ft-flex {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.ft-pwi {
+    color: var(--primary-clr);
+    font-weight: bold;
+}
+
+.ft-project {
+    font-weight: lighter;
+}
+
+.ft-pwi .ft-impact {
+    font-weight: bolder;
+    font-size: 1.09rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    color: var(--primary-clr);
+    font-weight: bold;
+}
+
+.icon:hover {
+    color: var(--sub-clr);
+}
+
+.ft-list ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.ft-list a {
+    color: var(--sub-clr);
+    font-size: .7rem;
+}
+
+.ft-list a:hover {
+    color: var(--primary-clr);
+}
+
+
+@media screen and (max-width: 930px) {
+    .donate {
+        gap: 4rem;
+        flex-direction: column;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    .ft-flex {
+        flex-direction: column;
+        text-align: left;
+        padding: 1rem;
+    }
+
+    .ft-list ul {
+        flex-direction: column;
+    }
+
+    .btns {
+        gap: 8px;
+    }
+
+    .btn {
+        padding: 7px 15px 7px 15px;
+    }
+    
+    .btn span {
+        padding: 5px 0 0 5px;
+        color: var(--sub-clr);
+    }
+}
+
+
